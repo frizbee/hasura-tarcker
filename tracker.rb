@@ -22,6 +22,6 @@ Open3.popen3("hasura metadata diff", chdir: hasura_dir) do |i,o,e,t|
         f.write(str + "\n")
       end
     end
-    Open3.capture3("hasura metadata export", :chdir=>"/home/deployer/apps/hasura")
+    Open3.capture3("hasura metadata export", chdir: hasura_dir)
   end
 end
